@@ -86,3 +86,38 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+
+//Question 1 The total number of months included in the dataset.
+// Answer = 86
+console.log ("Total Months: " + finances.length); 
+
+//Question 2 The net total amount of Profit/Losses over the entire period.
+//Answer = $38382578
+
+let sum =0;
+finances.forEach(finance=> sum+=finance[1]);
+   console.log("Total: " + "$"+sum);
+
+//question 3 The average of the changes in Profit/Losses over the entire period.
+//Answer = Average Change: -2315.12
+//(`Total/(Number of months - 1)`)
+
+let averageChange = 0;
+for (let i = 1; i < finances.length; i++) {
+  let currMonth = finances[i][1];
+  let prevMonth = finances[i - 1][1];
+  averageChange += currMonth - prevMonth;
+}
+
+let average = averageChange / (finances.length -1);
+let averageAmount = average.toFixed(2);
+
+console.log("Average Change: " + averageAmount);
+
+
+//* The greatest increase in Profit/Losses (date and amount) over the entire period.
+
+
+
+// The greatest decrease in Profit/Losses (date and amount) over the entire period.
