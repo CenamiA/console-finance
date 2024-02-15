@@ -88,6 +88,8 @@ var finances = [
 ];
 
 
+console.log("Financial Analysis");
+console.log("-------------------")
 //Question 1 The total number of months included in the dataset.
 // Answer = 86
 console.log ("Total Months: " + finances.length); 
@@ -117,6 +119,7 @@ console.log("Average Change: " + averageAmount);
 
 
 //* The greatest increase in Profit/Losses (date and amount) over the entire period.
+//Answer Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
 
 
 
